@@ -114,8 +114,3 @@ The beauty of Suckless tools lies in their customizability through code modifica
 1. Make your changes to the configuration files
 2. Recompile and reinstall using the instructions above
 3. Restart the application to apply changes
-
-
-
-*This collection is maintained independently and is not officially affiliated with the Suckless project.*
-
