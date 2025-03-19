@@ -1,3 +1,57 @@
+This is my Personal fork of dwm
+
+
+
+
+dwm - dynamic window manager
+============================
+dwm is an extremely fast, small, and dynamic window manager for X.
+
+
+Requirements
+------------
+In order to build dwm you need the Xlib header files.
+
+
+Installation
+------------
+Edit config.mk to match your local setup (dwm is installed into
+the /usr/local namespace by default).
+
+Afterwards enter the following command to build and install dwm (if
+necessary as root):
+
+    make clean install
+
+
+Running dwm
+-----------
+Add the following line to your .xinitrc to start dwm using startx:
+
+    exec dwm
+
+In order to connect dwm to a specific display, make sure that
+the DISPLAY environment variable is set correctly, e.g.:
+
+    DISPLAY=foo.bar:1 exec dwm
+
+(This will start dwm on display :1 of the host foo.bar.)
+
+In order to display status info in the bar, you can do something
+like this in your .xinitrc:
+
+    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
+    do
+    	sleep 1
+    done &
+    exec dwm
+
+
+Configuration
+-------------
+The configuration of dwm is done by creating a custom config.h
+and (re)compiling the source code.
+
 # Suckless Utilities Collection
 
 This repository contains a curated collection of utilities from the [Suckless](https://suckless.org) project. These tools are designed to be minimal, efficient, and highly customizable through source code modifications.
@@ -61,11 +115,7 @@ The beauty of Suckless tools lies in their customizability through code modifica
 2. Recompile and reinstall using the instructions above
 3. Restart the application to apply changes
 
-## Contributing
 
-Feel free to suggest improvements or share your own patches and configurations by opening an issue or pull request.
-
----
 
 *This collection is maintained independently and is not officially affiliated with the Suckless project.*
 
